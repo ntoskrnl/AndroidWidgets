@@ -3,6 +3,26 @@ AndroidWidgets
 
 Custom Android widgets used in cardiomood.com projects.
 
+## Import to your project
+
+The labrary is available in maven repository.
+
+You can include your library in your **build.gradle**:
+
+```gradle
+    compile 'com.cardiomood.android:android-widgets:0.1'
+```
+
+If you are using Maven, add the following dependency to **pom.xml**:
+```xml
+<dependency>
+  <groupId>com.cardiomood.android</groupId>
+  <artifactId>android-widgets</artifactId>
+  <version>0.1</version>
+  <type>aar</type>
+</dependency>
+```
+
 At the moment, the library include the following widgets:
 - **SpeedometerGauge** - a simple needle gauge that looks like speedometer
 - **BatteryIndicatorGauge** - an iPhone like pseudo-3d battery indicator
