@@ -10,7 +10,7 @@ At the moment, the library include the following widgets:
 - **CircledTextView** - a TextView that has a circle around it
 
 
-## SpeedometerView
+## SpeedometerGauge
 
 This was moved from the previous repository: https://github.com/ntoskrnl/SpeedometerView 
 
