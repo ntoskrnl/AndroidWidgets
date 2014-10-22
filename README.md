@@ -9,8 +9,8 @@ The labrary is available in maven repository.
 
 You can include your library in your **build.gradle**:
 
-```gradle
-    compile 'com.cardiomood.android:android-widgets:0.1'
+```
+compile 'com.cardiomood.android:android-widgets:0.1'
 ```
 
 If you are using Maven, add the following dependency to **pom.xml**:
