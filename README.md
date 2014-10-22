@@ -25,7 +25,7 @@ If you are using Maven, add the following dependency to **pom.xml**:
 
 ## Widgets
 
-At the moment, the library include the following widgets:
+At the moment, the library includes the following components:
 - **SpeedometerGauge** - a simple needle gauge that looks like speedometer
 - **BatteryIndicatorGauge** - an iPhone like pseudo-3d battery indicator
 - **CircularProgressBar** - a siple circular progress bar with a text inside
