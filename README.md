@@ -23,6 +23,8 @@ If you are using Maven, add the following dependency to **pom.xml**:
 </dependency>
 ```
 
+## Widgets
+
 At the moment, the library include the following widgets:
 - **SpeedometerGauge** - a simple needle gauge that looks like speedometer
 - **BatteryIndicatorGauge** - an iPhone like pseudo-3d battery indicator
