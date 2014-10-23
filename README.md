@@ -61,7 +61,7 @@ Configure SpeedometerGuge:
   private SpeedometerGauge speedometer;
 
   // Customize SpeedometerGauge
-  speedometer = (SpeedometerView) v.findViewById(R.id.speedometer);
+  speedometer = (SpeedometerGauge) v.findViewById(R.id.speedometer);
   
   // Add label converter
   speedometer.setLabelConverter(new SpeedometerView.LabelConverter() {
