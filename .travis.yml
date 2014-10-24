@@ -1,6 +1,16 @@
 language: android
 env:
-  global:
-    - REPO="ntoskrnl/AndroidWidgets"
-    - CI_HOME=`pwd`/$REPO
-script: build.sh
+  matrix:
+    - ANDROID_SDKS=android-21  ANDROID_TARGET=android-21
+
+android:
+  components:
+    - build-tools-20.0.0
+
+#before_install:
+#  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+#  - emulator -avd test -no-skin -no-audio -no-window &
+
+#before_script:
+#  - adb wait-for-device
+#  - adb shell input keyevent 82 &
