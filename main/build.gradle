@@ -1,13 +1,13 @@
 apply plugin: 'android-library'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 20
     buildToolsVersion "20.0.0"
 
     defaultConfig {
         applicationId "com.cardiomood.android.controls"
         minSdkVersion 9
-        targetSdkVersion 21
+        targetSdkVersion 20
         versionCode 1
         versionName "0.1"
     }
