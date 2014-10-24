@@ -1,11 +1,14 @@
 language: android
 env:
   matrix:
-    - ANDROID_SDKS=android-19  ANDROID_TARGET=android-19
+    - ANDROID_SDKS=android-L  ANDROID_TARGET=android-L
 
 android:
   components:
     - build-tools-20.0.0
+
+script:
+  - ./gradlew clean build
 
 #before_install:
 #  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
