@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CardioMoodWidgets.iml" filepath="$PROJECT_DIR$/CardioMoodWidgets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidWidgets.iml" filepath="$PROJECT_DIR$/AndroidWidgets.iml" />
       <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
     </modules>
   </component>
