@@ -3,4 +3,4 @@ env:
   global:
     - REPO="ntoskrnl/AndroidWidgets"
     - CI_HOME=`pwd`/$REPO
-script: $CI_HOME/build.sh
+script: build.sh
