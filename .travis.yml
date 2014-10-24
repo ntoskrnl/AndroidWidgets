@@ -1,7 +1,7 @@
 language: android
 env:
   matrix:
-    - ANDROID_SDKS=android-L  ANDROID_TARGET=android-L
+    - ANDROID_SDKS=android-19  ANDROID_TARGET=android-19
 
 android:
   components:
