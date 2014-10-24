@@ -1,1 +1,6 @@
-language: java
+language: android
+env:
+  global:
+    - REPO="ntoskrnl/AndroidWidgets"
+    - CI_HOME=`pwd`/$REPO
+script: build.sh
