@@ -1,4 +1,4 @@
-AndroidWidgets
+[![Build Status](http://img.shields.io/travis/ntoskrnl/AndroidWidgets/master.svg?style=flat)](https://travis-ci.org/ntoskrnl/AndroidWidgets.svg) AndroidWidgets
 ==============
 
 Custom Android widgets used in cardiomood.com projects.
