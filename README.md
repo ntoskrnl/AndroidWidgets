@@ -1,4 +1,4 @@
-[![Build Status](http://img.shields.io/travis/ntoskrnl/AndroidWidgets/master.svg?style=flat)](https://travis-ci.org/ntoskrnl/AndroidWidgets.svg) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.cardiomood.android/android-widgets/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.cardiomood.android/android-widgets) AndroidWidgets
+[![Build Status](http://img.shields.io/travis/ntoskrnl/AndroidWidgets/master.svg?style=flat)](https://travis-ci.org/ntoskrnl/AndroidWidgets) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.cardiomood.android/android-widgets/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.cardiomood.android/android-widgets) AndroidWidgets
 ==============
 
 Custom Android widgets used in cardiomood.com projects.
