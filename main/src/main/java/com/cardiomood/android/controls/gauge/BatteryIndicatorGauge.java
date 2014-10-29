@@ -3,7 +3,6 @@ package com.cardiomood.android.controls.gauge;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BlurMaskFilter;
@@ -75,20 +74,20 @@ public class BatteryIndicatorGauge extends View {
         super(context, attrs);
         density = getResources().getDisplayMetrics().density;
 
-        TypedArray attributes = context.getTheme().obtainStyledAttributes(
-                attrs,
-                R.styleable.BatteryIndicatorGauge,
-                0, 0);
-
-        try {
-            // read attributes
-            setMax(attributes.getFloat(R.styleable.BatteryIndicatorGauge_max, (float) DEFAULT_MAX));
-            setMin(attributes.getFloat(R.styleable.BatteryIndicatorGauge_min, (float) DEFAULT_MIN));
-            setValue(attributes.getFloat(R.styleable.BatteryIndicatorGauge_value, DEFAULT_VALUE));
-            setOrientation(attributes.getInt(R.styleable.BatteryIndicatorGauge_orientation, DEFAULT_ORIENTATION));
-        } finally {
-            attributes.recycle();
-        }
+//        TypedArray attributes = context.getTheme().obtainStyledAttributes(
+//                attrs,
+//                R.styleable.BatteryIndicatorGauge,
+//                0, 0);
+//
+//        try {
+//            // read attributes
+//            setMax(attributes.getFloat(R.styleable.BatteryIndicatorGauge_max, (float) DEFAULT_MAX));
+//            setMin(attributes.getFloat(R.styleable.BatteryIndicatorGauge_min, (float) DEFAULT_MIN));
+//            setValue(attributes.getFloat(R.styleable.BatteryIndicatorGauge_value, DEFAULT_VALUE));
+//            setOrientation(attributes.getInt(R.styleable.BatteryIndicatorGauge_orientation, DEFAULT_ORIENTATION));
+//        } finally {
+//            attributes.recycle();
+//        }
 
         init();
     }

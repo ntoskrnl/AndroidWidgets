@@ -10,7 +10,7 @@ The labrary is available in maven repository.
 You can include your library in your **build.gradle**:
 
 ```
-compile 'com.cardiomood.android:android-widgets:0.1'
+compile 'com.cardiomood.android:android-widgets:0.1.1'
 ```
 
 If you are using Maven, add the following dependency to **pom.xml**:
@@ -18,7 +18,7 @@ If you are using Maven, add the following dependency to **pom.xml**:
 <dependency>
   <groupId>com.cardiomood.android</groupId>
   <artifactId>android-widgets</artifactId>
-  <version>0.1</version>
+  <version>0.1.1</version>
   <type>aar</type>
 </dependency>
 ```
@@ -82,25 +82,3 @@ Configure SpeedometerGuge:
   speedometer.addColoredRange(180, 400, Color.RED);
 
 ```
-
-### Version History
-
-**SpeedometerView 1.0.1**
-
-- added attribute labelTextSize
-- text is drawn in dp (looks the same on all screens now)
-- fixed needle artifact
- 
-Download: [SpeedometerView-v1.0.1](https://github.com/ntoskrnl/SpeedometerView/releases/tag/SpeedometerView-v1.0.1)
-
-**SpeedometerView 1.0**
-
-Minimal Android SDK version: 9 (Android 2.3)
-
-**Supported features**:
-- Major and minor tick marks
-- Custom labels
-- Colored value ranges
-- Animation of arrow (*requires Android API level 11+*)
-
-Download: [SpeedometerView-v1.0](https://github.com/ntoskrnl/SpeedometerView/releases/tag/SpeedometerView-v1.0)

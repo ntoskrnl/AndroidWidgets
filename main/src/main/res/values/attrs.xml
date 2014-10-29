@@ -1,32 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="min" format="float" />
-    <attr name="max" format="float" />
-
-    <declare-styleable name="CircularProgressBar">
-        <attr name="max"/>
-        <attr name="progress" format="float" />
-        <attr name="min" />
-        <attr name="color" format="color" />
-        <attr name="lineWidth" format="dimension" />
-        <attr name="textSize" format="dimension" />
-    </declare-styleable>
-
-    <declare-styleable name="BatteryIndicatorGauge">
-        <attr name="value" format="float" />
-        <attr name="max"/>
-        <attr name="min"/>
-        <attr name="orientation" format="integer">
-            <enum name="horizontal" value="0"/>
-            <enum name="vertical" value="1"/>
-        </attr>
-    </declare-styleable>
-
-    <declare-styleable name="SpeedometerGauge">
-        <attr name="maxSpeed" format="float" />
-        <attr name="speed" format="float"/>
-        <attr name="labelTextSize" format="dimension" />
-    </declare-styleable>
-
 </resources>

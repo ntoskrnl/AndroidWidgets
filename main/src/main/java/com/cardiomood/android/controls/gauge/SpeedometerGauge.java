@@ -4,7 +4,6 @@ import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -67,20 +66,20 @@ public class SpeedometerGauge extends View {
     public SpeedometerGauge(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        float density = getResources().getDisplayMetrics().density;
-        TypedArray attributes = context.getTheme().obtainStyledAttributes(
-                attrs,
-                R.styleable.SpeedometerGauge,
-                0, 0);
-
-        try {
-            // read attributes
-            setMaxSpeed(attributes.getFloat(R.styleable.SpeedometerGauge_maxSpeed, (float) DEFAULT_MAX_SPEED));
-            setSpeed(attributes.getFloat(R.styleable.SpeedometerGauge_speed, 0));
-            setLabelTextSize(attributes.getDimensionPixelSize(R.styleable.SpeedometerGauge_labelTextSize, Math.round(DEFAULT_LABEL_TEXT_SIZE_DP * density)));
-        } finally {
-            attributes.recycle();
-        }
+//        float density = getResources().getDisplayMetrics().density;
+//        TypedArray attributes = context.getTheme().obtainStyledAttributes(
+//                attrs,
+//                R.styleable.SpeedometerGauge,
+//                0, 0);
+//
+//        try {
+//            // read attributes
+//            setMaxSpeed(attributes.getFloat(R.styleable.SpeedometerGauge_maxSpeed, (float) DEFAULT_MAX_SPEED));
+//            setSpeed(attributes.getFloat(R.styleable.SpeedometerGauge_speed, 0));
+//            setLabelTextSize(attributes.getDimensionPixelSize(R.styleable.SpeedometerGauge_labelTextSize, Math.round(DEFAULT_LABEL_TEXT_SIZE_DP * density)));
+//        } finally {
+//            attributes.recycle();
+//        }
         init();
     }
 

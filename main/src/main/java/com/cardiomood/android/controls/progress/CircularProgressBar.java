@@ -3,15 +3,12 @@ package com.cardiomood.android.controls.progress;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.cardiomood.android.controls.R;
 
 /**
  * Created by danon on 01.03.14.
@@ -50,22 +47,34 @@ public class CircularProgressBar extends View {
         super(context, attrs);
 
         density = getResources().getDisplayMetrics().density;
-        TypedArray attributes = context.getTheme().obtainStyledAttributes(
-                attrs,
-                R.styleable.CircularProgressBar,
-                0, 0);
+        textSize = DEFAULT_TEXT_SIZE*density;
 
-        try {
-            // read attributes
-            setMax(attributes.getFloat(R.styleable.CircularProgressBar_max, (float) DEFAULT_MAX));
-            setMin(attributes.getFloat(R.styleable.CircularProgressBar_min, (float) DEFAULT_MIN));
-            setProgress(attributes.getFloat(R.styleable.CircularProgressBar_progress, 0));
-            setLineWidth(attributes.getDimensionPixelSize(R.styleable.CircularProgressBar_lineWidth, DEFAULT_LINE_WIDTH));
-            setColor(attributes.getColor(R.styleable.CircularProgressBar_color, DEFAULT_COLOR));
-            setTextSize(attributes.getDimensionPixelSize(R.styleable.CircularProgressBar_textSize, Math.round(DEFAULT_TEXT_SIZE * density)));
-        } finally {
-            attributes.recycle();
-        }
+//        density = getResources().getDisplayMetrics().density;
+//        TypedArray attributes = context.getTheme().obtainStyledAttributes(
+//                attrs,
+//                R.styleable.CircularProgressBar,
+//                0, 0);
+//
+//        try {
+//            // read attributes
+//            setMax(attributes.getFloat(R.styleable.CircularProgressBar_max, (float) DEFAULT_MAX));
+//            setMin(attributes.getFloat(R.styleable.CircularProgressBar_min, (float) DEFAULT_MIN));
+//            setProgress(attributes.getFloat(R.styleable.CircularProgressBar_progress, 0));
+//            setLineWidth(attributes.getDimensionPixelSize(R.styleable.CircularProgressBar_lineWidth, DEFAULT_LINE_WIDTH));
+//            setColor(attributes.getColor(R.styleable.CircularProgressBar_color, DEFAULT_COLOR));
+//            setTextSize(attributes.getDimensionPixelSize(R.styleable.CircularProgressBar_textSize, Math.round(DEFAULT_TEXT_SIZE * density)));
+//        } finally {
+//            attributes.recycle();
+//        }
+
+        init();
+    }
+
+    public CircularProgressBar(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+
+        density = getResources().getDisplayMetrics().density;
+        textSize = DEFAULT_TEXT_SIZE*density;
 
         init();
     }

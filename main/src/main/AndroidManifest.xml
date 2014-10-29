@@ -2,7 +2,7 @@
     package="com.cardiomood.android.controls">
 
     <application android:allowBackup="true">
-
+        
     </application>
 
 </manifest>
