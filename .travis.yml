@@ -1,11 +1,12 @@
 language: android
 env:
   matrix:
-    - ANDROID_SDKS=android-19  ANDROID_TARGET=android-19
+    - ANDROID_SDKS=android-21  ANDROID_TARGET=android-21
 
 android:
   components:
     - build-tools-20.0.0
+    - android-L
 
 script:
   - ./gradlew clean build
