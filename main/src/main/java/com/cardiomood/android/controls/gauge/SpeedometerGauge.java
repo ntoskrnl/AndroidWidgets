@@ -65,22 +65,10 @@ public class SpeedometerGauge extends View {
 
     public SpeedometerGauge(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-//        float density = getResources().getDisplayMetrics().density;
-//        TypedArray attributes = context.getTheme().obtainStyledAttributes(
-//                attrs,
-//                R.styleable.SpeedometerGauge,
-//                0, 0);
-//
-//        try {
-//            // read attributes
-//            setMaxSpeed(attributes.getFloat(R.styleable.SpeedometerGauge_maxSpeed, (float) DEFAULT_MAX_SPEED));
-//            setSpeed(attributes.getFloat(R.styleable.SpeedometerGauge_speed, 0));
-//            setLabelTextSize(attributes.getDimensionPixelSize(R.styleable.SpeedometerGauge_labelTextSize, Math.round(DEFAULT_LABEL_TEXT_SIZE_DP * density)));
-//        } finally {
-//            attributes.recycle();
-//        }
         init();
+
+        float density = getResources().getDisplayMetrics().density;
+        setLabelTextSize(Math.round(DEFAULT_LABEL_TEXT_SIZE_DP * density));
     }
 
     public double getMaxSpeed() {
@@ -390,6 +378,7 @@ public class SpeedometerGauge extends View {
         txtPaint.setColor(Color.WHITE);
         txtPaint.setTextSize(labelTextSize);
         txtPaint.setTextAlign(Paint.Align.CENTER);
+        txtPaint.setLinearText(true);
 
         mMask = BitmapFactory.decodeResource(getResources(), R.drawable.spot_mask);
         mMask = Bitmap.createBitmap(mMask, 0, 0, mMask.getWidth(), mMask.getHeight() / 2);
