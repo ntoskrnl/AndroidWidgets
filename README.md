@@ -5,7 +5,7 @@ Custom Android widgets used in cardiomood.com projects.
 
 ## Import to your project
 
-The labrary is available in maven repository.
+The library is available in maven repository.
 
 You can include your library in your **build.gradle**:
 
