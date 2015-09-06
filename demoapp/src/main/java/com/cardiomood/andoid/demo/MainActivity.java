@@ -6,12 +6,15 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.cardiomood.android.controls.gauge.BatteryIndicatorGauge;
 import com.cardiomood.android.controls.gauge.SpeedometerGauge;
+import com.cardiomood.android.controls.progress.CircularProgressBar;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private SpeedometerGauge speedometer;
+    private BatteryIndicatorGauge batteryindicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,20 +22,26 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         speedometer = (SpeedometerGauge) findViewById(R.id.speedometer);
-        speedometer.setMaxSpeed(300);
+        speedometer.setMaxSpeed(50);
         speedometer.setLabelConverter(new SpeedometerGauge.LabelConverter() {
             @Override
             public String getLabelFor(double progress, double maxProgress) {
                 return String.valueOf((int) Math.round(progress));
             }
         });
-        speedometer.setMaxSpeed(300);
-        speedometer.setMajorTickStep(30);
-        speedometer.setMinorTicks(2);
-        speedometer.addColoredRange(30, 140, Color.GREEN);
-        speedometer.addColoredRange(140, 180, Color.YELLOW);
-        speedometer.addColoredRange(180, 400, Color.RED);
-        speedometer.setSpeed(80, 1000, 300);
+        speedometer.setMaxSpeed(50);
+        speedometer.setMajorTickStep(5);
+        speedometer.setMinorTicks(4);
+        speedometer.addColoredRange(0, 30, Color.GREEN);
+        speedometer.addColoredRange(30, 45, Color.YELLOW);
+        speedometer.addColoredRange(45, 50, Color.RED);
+        speedometer.setSpeed(33, 1000, 300);
+
+        batteryindicator = (BatteryIndicatorGauge) findViewById(R.id.batteryindicator);
+        batteryindicator.setValue(80, 1000, 300);
+
+        CircularProgressBar circ = (CircularProgressBar) findViewById(R.id.circularprogress);
+        circ.setProgress(90, 1000);
     }
 
 
