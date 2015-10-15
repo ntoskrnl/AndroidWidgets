@@ -3,7 +3,8 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@android:color/background_dark">
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -14,5 +15,17 @@
         android:padding="8dp"
         android:id="@+id/speedometer"/>
 
+    <com.cardiomood.android.controls.gauge.BatteryIndicatorGauge
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speedometer"
+        android:padding="8dp"
+        android:id="@+id/batteryindicator"/>
 
+    <com.cardiomood.android.controls.progress.CircularProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/batteryindicator"
+        android:padding="8dp"
+        android:id="@+id/circularprogress"/>
 </RelativeLayout>

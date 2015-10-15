@@ -34,6 +34,7 @@ public class SpeedometerGauge extends View {
     public static final double DEFAULT_MAJOR_TICK_STEP = 20.0;
     public static final int DEFAULT_MINOR_TICKS = 1;
     public static final int DEFAULT_LABEL_TEXT_SIZE_DP = 12;
+    public static final int DEFAULT_UNITS_TEXT_SIZE_DP = 24;
 
     private double maxSpeed = DEFAULT_MAX_SPEED;
     private double speed = 0;
@@ -41,6 +42,7 @@ public class SpeedometerGauge extends View {
     private double majorTickStep = DEFAULT_MAJOR_TICK_STEP;
     private int minorTicks = DEFAULT_MINOR_TICKS;
     private LabelConverter labelConverter;
+    private String unitsText = "km/h";
 
     private List<ColoredRange> ranges = new ArrayList<ColoredRange>();
 
@@ -50,8 +52,10 @@ public class SpeedometerGauge extends View {
     private Paint needlePaint;
     private Paint ticksPaint;
     private Paint txtPaint;
+    private Paint unitsPaint;
     private Paint colorLinePaint;
     private int labelTextSize;
+    private int unitsTextSize;
 
     private Bitmap mMask;
 
@@ -61,6 +65,7 @@ public class SpeedometerGauge extends View {
 
         float density = getResources().getDisplayMetrics().density;
         setLabelTextSize(Math.round(DEFAULT_LABEL_TEXT_SIZE_DP * density));
+        setUnitsTextSize(Math.round(DEFAULT_UNITS_TEXT_SIZE_DP * density));
     }
 
     public SpeedometerGauge(Context context, AttributeSet attrs) {
@@ -69,6 +74,7 @@ public class SpeedometerGauge extends View {
 
         float density = getResources().getDisplayMetrics().density;
         setLabelTextSize(Math.round(DEFAULT_LABEL_TEXT_SIZE_DP * density));
+        setUnitsTextSize(Math.round(DEFAULT_UNITS_TEXT_SIZE_DP * density));
     }
 
     public double getMaxSpeed() {
@@ -92,6 +98,15 @@ public class SpeedometerGauge extends View {
         if (speed > maxSpeed)
             speed = maxSpeed;
         this.speed = speed;
+        invalidate();
+    }
+
+    public String getUnitsText() {
+        return unitsText;
+    }
+
+    public void setUnitsText(String unitsText) {
+        this.unitsText = unitsText;
         invalidate();
     }
 
@@ -190,6 +205,18 @@ public class SpeedometerGauge extends View {
         this.labelTextSize = labelTextSize;
         if (txtPaint != null) {
             txtPaint.setTextSize(labelTextSize);
+            invalidate();
+        }
+    }
+
+    public int getUnitsTextSize() {
+        return unitsTextSize;
+    }
+
+    public void setUnitsTextSize(int unitsTextSize) {
+        this.unitsTextSize = unitsTextSize;
+        if (unitsPaint != null) {
+            unitsPaint.setTextSize(unitsTextSize);
             invalidate();
         }
     }
@@ -358,6 +385,8 @@ public class SpeedometerGauge extends View {
 
         Bitmap mask = Bitmap.createScaledBitmap(mMask, (int) (oval.width() * 1.1), (int) (oval.height() * 1.1) / 2, true);
         canvas.drawBitmap(mask, oval.centerX() - oval.width()*1.1f/2, oval.centerY()-oval.width()*1.1f/2, maskPaint);
+
+        canvas.drawText(unitsText, oval.centerX(), oval.centerY()/1.5f, unitsPaint);
     }
 
     @SuppressWarnings("NewApi")
@@ -379,6 +408,12 @@ public class SpeedometerGauge extends View {
         txtPaint.setTextSize(labelTextSize);
         txtPaint.setTextAlign(Paint.Align.CENTER);
         txtPaint.setLinearText(true);
+
+        unitsPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        unitsPaint.setColor(Color.WHITE);
+        unitsPaint.setTextSize(unitsTextSize);
+        unitsPaint.setTextAlign(Paint.Align.CENTER);
+        unitsPaint.setLinearText(true);
 
         mMask = BitmapFactory.decodeResource(getResources(), R.drawable.spot_mask);
         mMask = Bitmap.createBitmap(mMask, 0, 0, mMask.getWidth(), mMask.getHeight() / 2);

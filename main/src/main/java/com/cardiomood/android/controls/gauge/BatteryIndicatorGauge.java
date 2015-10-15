@@ -193,7 +193,7 @@ public class BatteryIndicatorGauge extends View {
         int height;
 
         //Measure Width
-        if (widthMode == MeasureSpec.EXACTLY || widthMode == MeasureSpec.AT_MOST) {
+        if (widthMode == MeasureSpec.EXACTLY) {
             //Must be this size
             width = widthSize;
         } else {
@@ -201,7 +201,7 @@ public class BatteryIndicatorGauge extends View {
         }
 
         //Measure Height
-        if (heightMode == MeasureSpec.EXACTLY || heightMode == MeasureSpec.AT_MOST) {
+        if (heightMode == MeasureSpec.EXACTLY) {
             //Must be this size
             height = heightSize;
         } else {
