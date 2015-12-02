@@ -64,7 +64,7 @@ Configure SpeedometerGuge:
   speedometer = (SpeedometerGauge) v.findViewById(R.id.speedometer);
   
   // Add label converter
-  speedometer.setLabelConverter(new SpeedometerView.LabelConverter() {
+  speedometer.setLabelConverter(new SpeedometerGauge.LabelConverter() {
       @Override
       public String getLabelFor(double progress, double maxProgress) {
           return String.valueOf((int) Math.round(progress));
